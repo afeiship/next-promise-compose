@@ -6,10 +6,11 @@
 
   nx.promiseCompose = function () {
     var fns = nx.slice(arguments);
-    return function (inInitialValue) {
+    return function (value) {
+      var initial = Promise.resolve(value);
       return fns.reduce(function (chain, fn) {
         return chain.then(fn);
-      }, Promise.resolve(inInitialValue));
+      }, initial);
     };
   };
 
