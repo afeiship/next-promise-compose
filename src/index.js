@@ -8,9 +8,13 @@
     var fns = nx.slice(arguments);
     return function (value) {
       var initial = Promise.resolve(value);
-      return fns.reduce(function (chain, fn) {
-        return chain.then(fn);
-      }, initial);
+      try {
+        return fns.reduce(function (chain, fn) {
+          return chain.then(fn);
+        }, initial);
+      } catch (err) {
+        return Promise.reject(err);
+      }
     };
   };
 
