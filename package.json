@@ -1,6 +1,6 @@
 {
   "name": "@jswork/next-promise-compose",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Promise compose for next.",
   "homepage": "https://github.com/afeiship/next-promise-compose",
   "author": {
