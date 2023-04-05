@@ -1,3 +1,3 @@
 interface NxStatic {
-  promiseCompose(...args): any;
+  // your codes goes here.
 }
