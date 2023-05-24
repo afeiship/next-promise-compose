@@ -15,7 +15,7 @@ nx.promiseCompose = function (...fns) {
   };
 };
 
-if (typeof module !== 'undefined' && module.exports) {
+if (typeof module !== 'undefined' && module.exports && typeof wx === 'undefined') {
   module.exports = nx.promiseCompose;
 }
 
